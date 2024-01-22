@@ -5,6 +5,8 @@ services:
       dockerfile: dev.dockerfile
     depends_on:
       - db
+    env_file:
+      - .env
     environment:
       DATABASE_URL: $DB_URL
     platform: linux/amd64
