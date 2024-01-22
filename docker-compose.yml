@@ -1,0 +1,29 @@
+services:
+
+  app:
+    build:
+      dockerfile: dev.dockerfile
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: $DB_URL
+    platform: linux/amd64
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - bundle_home:/usr/local/bundle
+
+  db:
+    image: postgres:16.1
+    environment:
+      POSTGRES_DB: $DB_NAME
+      POSTGRES_PASSWORD: $DB_PASSWORD
+      POSTGRES_USER: $DB_USER
+    volumes:
+      - db_data_dir:/var/lib/postgresql
+
+volumes:
+
+  db_data_dir:
+  bundle_home:

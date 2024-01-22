@@ -1,24 +1,23 @@
-# README
+# Phone Up
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A proof of concept for making phone calls through the browser using [Twilio Voice API](https://www.twilio.com/en-us/voice).
 
-Things you may want to cover:
+## Run
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Ensure [Docker](https://docs.docker.com/get-docker/) is running.
+2. Copy [`.env.example`](.env.example) to `.env`.
+   ```shell
+   cp .env.example .env
+   ```
+3. Run the application container.
+   ```shell
+   docker compose up app
+   ```
+4. Browse to http://localhost:3000/.
+   ```shell
+   open http://localhost:3000/
+   ```
+5. Stop the application container.
+   ```shell
+   docker compose down
+   ```
