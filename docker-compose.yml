@@ -7,8 +7,6 @@ services:
       - db
     env_file:
       - .env
-    environment:
-      DATABASE_URL: $DB_URL
     platform: linux/amd64
     ports:
       - "3000:3000"
