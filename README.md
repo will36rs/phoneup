@@ -46,3 +46,7 @@ A proof of concept for making phone calls through the browser using [Twilio Voic
    ```shell
    docker compose down
    ```
+6. Run tests.
+   ```shell
+   docker compose run test
+   ```

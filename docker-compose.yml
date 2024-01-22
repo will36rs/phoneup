@@ -1,6 +1,6 @@
 services:
 
-  app:
+  app: &app
     build:
       dockerfile: dev.dockerfile
     depends_on:
@@ -13,6 +13,12 @@ services:
     volumes:
       - .:/app
       - bundle_home:/usr/local/bundle
+
+  test:
+    <<: *app
+    command: bundle exec rails test
+    environment:
+      RAILS_ENV: test
 
   db:
     image: postgres:16.1

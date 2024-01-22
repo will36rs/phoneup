@@ -49,6 +49,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
+  gem 'mocha', '~> 2.1'
 end
 
 group :development do
@@ -70,11 +71,9 @@ end
 
 gem 'twilio-ruby', '~> 6.9'
 
-gem 'rubocop-minitest', '~> 0.34.5'
-gem 'rubocop-rails', '~> 2.23'
-
-gem 'rubocop-performance', '~> 1.20'
-
 gem 'rubocop-capybara', '~> 2.20'
+gem 'rubocop-minitest', '~> 0.34.5'
+gem 'rubocop-performance', '~> 1.20'
+gem 'rubocop-rails', '~> 2.23'
 
 gem 'rails-patterns', '~> 0.11.0'
